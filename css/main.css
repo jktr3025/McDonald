@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+#wrap {}
+
+/* 헤더 영역 */
+#header {
+    background: white;
+    width: 100%;
+    height: 140px;
+}
+
+.head_inner {
+    width: 1168px;
+    height: 140px;
+    margin: 0 auto;
+    /* border: 1px solid darkblue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 106px;
+    height: 96px;
+    margin-top: 24px;
+    /* border: 1px solid rebeccapurple; */
+}
+
+.nav {}
+
+.main {
+    display: flex;
+    /* border: 1px solid darksalmon; */
+    width: 650px;
+    justify-content: flex-start;
+    z-index: 100;
+
+}
+
+.main>li {
+    /* border: 1px solid green; */
+    position: relative;
+    margin-right: 120px;
+    
+}
+
+.main>li>a {
+    display: block;
+    /* width: 140px; */
+    padding-right: 15px;
+    /* text-align: center; */
+    height: 140px;
+    line-height: 140px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: capitalize;
+    /* border: 1px solid brown; */
+
+
+}
+
+.main>li:hover>a {
+    border-bottom: 2px solid #dc7d00;
+}
+.sub {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    z-index: 100;
+}
+.sub_bg{
+    display: none;
+    position: absolute;
+    width: 1920px;
+    height: 400px;
+    background-color: white;
+    z-index: 90;
+    border-top: 1px solid #999;
+}
+.sub li {}
+
+.sub li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+    /* border: 1px solid darkblue; */
+    width: 140px;
+
+}
+
+.sub li a:hover {
+    text-decoration: underline;
+}
+
+.util {
+    display: flex;
+    height: 140px;
+    align-items: center;
+}
+
+.util li {
+    margin-left: 10px;
+}
+
+.util li a {
+    display: block;
+    width: 80px;
+    height: 36px;
+    border-radius: 18px;
+    /* border: 1px slateblue solid; */
+    text-align: center;
+    line-height: 36px;
+    color: white;
+    font-weight: bold;
+}
+
+.util_1 a {
+    background: #df000f;
+}
+
+.util_2 a {
+    background: #dc7d00;
+}
+
+.util_3 a {
+    background: #254b36;
+}
+
+.util_4 {
+    margin-left: 15px !important;
+}
+
+.util_4 a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    text-indent: -9999px;
+    background: url(../images/ico_search.png) no-repeat;
+    background-size: 45%;
+    background-position: center center;
+}
+
+/* 슬라이드 영역 */
+#slide_img {
+    width: 1920px;
+    margin: 0 auto;
+    height: 540px;
+    position: relative;   /* 컨트롤에 대한 포지션 */
+}
+
+.view {
+    width: 1920px;
+    height: 540px;
+    position: relative;
+}
+
+.move {
+    width: calc(1920px * 10);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.move li {
+    float: left;
+    width: 1920px;
+    height: 540px;
+}
+
+.contol {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 1920px;
+}
+
+.contol button {
+    width: 90px;
+    height: 90px;
+    background: url(../images/bg_swiper_new.png) no-repeat;
+    text-indent: -9999px;
+    border: none;
+    cursor: pointer;
+}
+
+.contol button.prev {}
+
+.contol button.next {
+    background-position-y: -90px;
+}
+
+/* content 영역 */
+.content{}
+.cont_inner{
+    width: 1168px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.l_title{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.l_list_1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border: 1px solid darkgreen; */
+
+}
+.l_list_1 li{
+    width: 366px;
+    height: 438px;
+    /* border: 1px solid darkblue; */
+    border-radius: 0 0 20px 20px;
+    box-shadow: 1px 1px 5px #99999978;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.l_list_1 li a{}
+.l_list_1 li a .list_img{
+    width: 366px;
+    height: 300px;
+    margin-bottom: 50px;
+}
+.l_list_1 li a h4{
+    padding-left: 30px;
+    line-height: 2;
+}
+.l_list_2{
+    /* display: flex; */
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border: 1px solid darkgreen; */
+
+}
+.l_list_2.show{
+    display: flex;
+}
+.l_list_2 li{
+    width: 366px;
+    height: 438px;
+    /* border: 1px solid darkblue; */
+    border-radius: 0 0 20px 20px;
+    box-shadow: 1px 1px 5px #99999978;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.l_list_2 li a{}
+.l_list_2 li a .list_img{
+    width: 366px;
+    height: 300px;
+    margin-bottom: 50px;
+}
+.l_list_2 li a h4{
+    padding-left: 30px;
+    line-height: 2;
+}
+/* dot 영역 */
+.dot{}
+.dot a{
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: url(../images/btn_more.png) no-repeat;
+    text-indent: -9999px;
+    margin: 0 auto;
+}
+.dot a.close{
+    background: url(../images/btn_close.png) no-repeat;
+}
+
+/* footer 영역 */
+#footer{
+    width: 100%;
+    padding: 30px 0;
+    background: #292929;
+    }
+.foot_inner{
+    width: 1168px;
+    margin: 0 auto;
+    color: white;
+    overflow: hidden;
+
+}
+.f_menu{
+    margin-right: 50px;
+    float: left;
+}
+.f_menu li{}
+.f_menu li a{
+    display: block;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.f_menu li a.yellow{
+    color: yellow;
+}
+
+.info{
+    float: left;
+}
+.info li{
+    padding: 5px 0;
+    color: #ccc;
+}
+.sns{
+    float: right;
+
+}
+.sns li{
+    display: inline-block;
+    margin-left: 10px;
+}
+.sns li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    background-image: url(../images/ico_sns.png);
+    background-repeat: no-repeat;
+}
+li.sns_1 a{}
+li.sns_2 a{
+    background-position-y: -40px;
+}
+li.sns_3 a{
+    background-position-y: -80px;
+}
+li.sns_4 a{
+    background-position-y: -120px;
+}
+li.sns_5 a{
+    width: 100px;
+    height: 72px;
+    background-image: url(../images/science.png);
+    background-size: 100%;
+}
+
+
+/* fix 영역 */
+.top{
+    width: 120px;
+    /* border: 1px saddlebrown solid; */
+    position: fixed;
+    bottom: 300px;
+    right: calc(50% - 504px - 20px - 120px - 100px);
+    /* background: white; */
+}
+.top li{
+    text-align: center;
+    margin: 20px 0;
+}
+.top li a{}
+.top li a img{}
